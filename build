@@ -1,0 +1,5 @@
+#!/bin/bash
+
+git clean -fx out
+./node_modules/browserify/bin/cmd.js src/main.js -o out/main.js -t uglifyify
+cp -r resources/* out
